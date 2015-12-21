@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Inertia Games</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+<header>
+	<h1>Inertia Games</h1>
+</header>
+<nav id="menu-nav">
+	<select id="menu">
+		<option value="about">About the Inertia Games</option>
+		<option value="race">Race game</option>
+		<option value="dock1">Dock 1</option>
+		<option value="dock2">Dock 2</option>
+		<option value="corner1">Corner 1</option>
+		<option value="corner2">Corner 2</option>
+		<option value="corner3">Corner 3</option>
+		<option value="corner4">Corner 4</option>
+		<option value="dynatrack">Dynatrack</option>
+	</select>
+</nav>
+
+<section id="about">
+	<p>Based on games designed by Barbara Y.White (<i>Cognition and Instruction 1(1):69-108, 1984</i>) and on the Dynatrack game developed by Andrea A. DiSessa (<i>Cognitive Science 6(1): 37-75, 1982</i>).</p>
+	<p>Programmed in Pascal for the Apple II by Robert A. Morse, St. Albans School, Washington, DC 20016. Pascal version &copy; 1985.</p>
+	<p>Programmed in cT for Macintosh and MS-DOS by Richard E. Morse &amp; Robert A. Morse. cT version &copy; 1993.</p>
+	<p>Programmed in Java (JDK 1.1.8/Swing 1.1.1) by REMorse.  &copy; 2000.</p>
+	<p>Repackaged in Java by Ricky Morse (inertiagames@pukku.com).  &copy; 2004.</p>
+	<p>Programmed in JavaScript/HTML5 by Ricky Morse (inertiagames@pukku.com). &copy; 2016.</p>
+</section>
+
+<section id="race">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>There is a spaceship initially at rest in outer space.</p>
+		<p>You control the ship's impulse engine with two buttons:</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 90° to left.</dd>
+		</dl>
+		<p>Object of game: cross finish line with fastest speed.</p>
+		<p>If you hit the walls, you crash.</p>
+	</div>
+</section>
+
+<section id="dock1">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is at rest relative to the circular target.</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 90° to left.</dd>
+		</dl>
+		<p>Object of game: stop ship inside target.</p>
+		<p>If you hit the walls, you crash.</p>
+	</div>
+</section>
+
+<section id="dock2">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is at rest relative to the circular target.</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 90° to left.</dd>
+		</dl>
+		<p>Object of game: stop ship inside target.</p>
+		<p>If you hit the walls, you crash.</p>
+	</div>
+</section>
+
+<section id="corner1">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is at rest in the region bounded by the walls.</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 90° to left.</dd>
+		</dl>
+		<p>Objective: maneuver ship around corner to the finish line.</p>
+		<p>If you hit the walls, you crash.</p>
+	</div>
+</section>
+
+<section id="corner2">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is already moving in the region bounded by the walls. (You will need to press the “Start” button to get the ship moving.)</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 90° to left.</dd>
+		</dl>
+		<p>Objective: maneuver ship around corner to the finish line.</p>
+		<p>If you hit the walls, you crash.</p>
+	</div>
+</section>
+
+<section id="corner3">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is at rest in the region bounded by the walls.</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 45° to left.</dd>
+		</dl>
+		<p>Objective: maneuver ship around corner to the finish line.</p>
+		<p>If you hit the walls, you crash.</p>
+	</div>
+</section>
+
+<section id="corner4">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is already moving in the region bounded by the walls. (You will need to press the “Start” button to get the ship moving.)</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+			<dt>ROTATE:</dt>
+			<dd>re-aims ship, rotating it 45° to left.</dd>
+		</dl>
+		<p>Rotate as often as you wish, but you have only <b>one</b> kick.<p>
+		<p>Objective: maneuver ship around corner to the finish line.</p>
+		<p>If you hit the walls, you crash.</p>
+		<p>The strength of the kick has been adjusted relative to the initial speed.</p>
+	</div>
+</section>
+
+<section id="dynatrack">
+	<div class="board">
+	</div>
+	<div class="instructions">
+		<p>The spaceship is at rest between the walls.</p>
+		<dl>
+			<dt>KICK:</dt>
+			<dd>fires the engine briefly.</dd>
+			<dt>ROTATE:</dt>
+			<dd>rotates it 45° left.</dd>
+		</dl>
+		<p>Objective: maneuver ship around circular track as many times as possible without crashing into walls.</p>
+	</div>
+</section>
+
+</body>
+</html>
