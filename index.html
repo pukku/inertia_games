@@ -4,15 +4,60 @@
 	<meta charset="utf-8" />
 	<title>Inertia Games</title>
 	<style type="text/css">
+		* { box-sizing: border-box; }
+
+		header { }
+		img#inertia-games-logo { display: block; }
+		h1#inertia-games-title { display: none; }
+
+		section#game { position: relative; text-align: top;}
+
+		div#canvases-wrapper { position: relative; width: 400px; height: 250px;}
+		canvas { margin: 0; padding: 0; position: absolute; top: 0; left: 0; }
+		canvas#canvas-background { border: thin solid red; z-index: 1; }
+		canvas#canvas-tracking { border: thin solid blue; z-index: 2; }
+		canvas#canvas-rocket { border: thin solid green; z-index: 3; }
+
+		div#controls-wrapper { position: absolute; top: 0; left: 410px; height: 250px;}
+		#controls-wrapper button, #controls-wrapper label { display: block; width: 75px; height: 30px; margin-bottom: 20px; }
+		#controls-wrapper label { padding: 10px 0; }
+
+		div.instructions { display: none; }
 	</style>
+
+	<script type="text/javascript">
+		function _loadrockets () {
+			var srcs = [
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAAXNSR0IArs4c6QAAAE5JREFUeJxi+M+AChn+Y4pg4eJRgmDiUIJqIBZxNBuRFOFUgFCERwFMEV4FEEUEFOANIvI8TXS4YLJJUYIlsNB5BJWgOxKVDwAAAP//AwCkBx/vyP6BVAAAAABJRU5ErkJggg==',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAD5JREFUeJxi+M8Agwz/iYIDoIx8RQPoJ4JaYEqI1ICsiIBv8bgYwcTrMaIUobsJr7sIKkIOEBAEAAAA//8DAOqyQsw5WUhrAAAAAElFTkSuQmCC',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAAXNSR0IArs4c6QAAAFNJREFUeJyUkkEKACAIBP3/p+1QUjqihpcahnA1UfElSpKAQAA0SkB2gHJhvDuFNVC2VIU7UqvUI7JXBr18JWrmwo4eMthRlqtJyv+yAAAA//8DAKQHH++TQjLQAAAAAElFTkSuQmCC',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAEFJREFUeJxi+M+ADTL8R+VhVUJQEYTCqwjGwKMIwSTRJJzORijC4WlkRTh1YzUepzD1lZCpiVqKaK0EAAAA//8DAOqyQsywiGK9AAAAAElFTkSuQmCC',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAAXNSR0IArs4c6QAAAFBJREFUeJxi+M/wn4HhPwxCKFQ+A6ogHh4RSmAMTDZpSlCYSAqopgRVAgfELw2Vx6cAI+iwuQePdeR5GjPGsZqPqQCLE9AV/GcAAAAA//8DAKQHH++IuBdKAAAAAElFTkSuQmCC',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAFRJREFUeJy0kUkOAEAEBP3/0yZOGm25TFw0RSyi4iaKCuNJnCCGUXGCMhaGbTthsJ0JExECr25cCwhUS1bIsAOUDzWd4B9E3rJjw3buPgAAAP//AwDqskLMaxWnvgAAAABJRU5ErkJggg==',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAAXNSR0IArs4c6QAAAEhJREFUeJxi+M+AChn+Y4pgcPEqgVAEFSArwWkcVmksAlRSgCSPSyeKEUQoIcItZCjCowmHK7ApIuAETCVYFaGLAAAAAP//AwCkBx/vFcvihAAAAABJRU5ErkJggg==',
+				'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAFNJREFUeJy0kTEOACAIA/v/T2OYtNAGFsPi6QUaBMLVPWJWrMQopXrxWWo1K4tOZtw7gTL1hyQKzvlEbvojtwINC2nRSWSqoJZVQCmBAwAA//8DAOqyQswe2zMXAAAAAElFTkSuQmCC'
+			];
+
+			var ret = Array();
+			for (var i = 0; i < srcs.length; i++) {
+				ret[i] = new Image();
+				ret[i].src = srcs[i];
+			}
+
+			return ret;
+		}
+
+		var rockets = _loadrockets();
+	</script>
 </head>
 <body>
 <header>
-	<h1>Inertia Games</h1>
+	<img id="inertia-games-logo" alt="Inertia Games" title="Inertia Games" src="data:image/png;base64,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" />
+	<h1 id="inertia-games-title">Inertia Games</h1>
 </header>
 <nav id="menu-nav">
+	Choose a game:
 	<select id="menu">
-		<option value="about">About the Inertia Games</option>
 		<option value="race">Race game</option>
 		<option value="dock1">Dock 1</option>
 		<option value="dock2">Dock 2</option>
@@ -24,8 +69,114 @@
 	</select>
 </nav>
 
+<section id="game">
+	<div id="canvases-wrapper">
+		<canvas id="canvas-background" width="400" height="250"></canvas>
+		<canvas id="canvas-tracking" width="400" height="250"></canvas>
+		<canvas id="canvas-rocket" width="400" height="250"></canvas>
+	</div>
+	<div id="controls-wrapper">
+		<button id="button-kick">kick</button>
+		<button id="button-rotate">rotate</button>
+		<label for="button-tracking"><input type="checkbox" id="button-tracking" /> track</label>
+		<button id="button-replay">replay</button>
+	</div>
+	<div id="instructions-wrapper">
+		<div class="instructions" id="instructions-race">
+			<p>There is a spaceship initially at rest in outer space.</p>
+			<p>You control the ship's impulse engine with two buttons:</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 90° to left.</dd>
+			</dl>
+			<p>Object of game: cross finish line with fastest speed.</p>
+			<p>If you hit the walls, you crash.</p>
+		</div>
+		<div class="instructions" id="instructions-dock1">
+			<p>The spaceship is at rest relative to the circular target.</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 90° to left.</dd>
+			</dl>
+			<p>Object of game: stop ship inside target.</p>
+			<p>If you hit the walls, you crash.</p>
+		</div>
+		<div class="instructions" id="instructions-dock2">
+			<p>The spaceship is at rest relative to the circular target.</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 90° to left.</dd>
+			</dl>
+			<p>Object of game: stop ship inside target.</p>
+			<p>If you hit the walls, you crash.</p>
+		</div>
+		<div class="instructions" id="instructions-corner1">
+			<p>The spaceship is at rest in the region bounded by the walls.</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 90° to left.</dd>
+			</dl>
+			<p>Objective: maneuver ship around corner to the finish line.</p>
+			<p>If you hit the walls, you crash.</p>
+		</div>
+		<div class="instructions" id="instructions-corner2">
+			<p>The spaceship is already moving in the region bounded by the walls. (You will need to press the “Start” button to get the ship moving.)</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 90° to left.</dd>
+			</dl>
+			<p>Objective: maneuver ship around corner to the finish line.</p>
+			<p>If you hit the walls, you crash.</p>
+		</div>
+		<div class="instructions" id="instructions-corner3">
+			<p>The spaceship is at rest in the region bounded by the walls.</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 45° to left.</dd>
+			</dl>
+			<p>Objective: maneuver ship around corner to the finish line.</p>
+			<p>If you hit the walls, you crash.</p>
+		</div>
+		<div class="instructions" id="instructions-corner4">
+			<p>The spaceship is already moving in the region bounded by the walls. (You will need to press the “Start” button to get the ship moving.)</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires engine briefly kicking ship in direction it is heading.</dd>
+				<dt>ROTATE:</dt>
+				<dd>re-aims ship, rotating it 45° to left.</dd>
+			</dl>
+			<p>Rotate as often as you wish, but you have only <b>one</b> kick.<p>
+			<p>Objective: maneuver ship around corner to the finish line.</p>
+			<p>If you hit the walls, you crash.</p>
+			<p>The strength of the kick has been adjusted relative to the initial speed.</p>
+		</div>
+		<div class="instructions" id="instructions-dynatrack">
+			<p>The spaceship is at rest between the walls.</p>
+			<dl>
+				<dt>KICK:</dt>
+				<dd>fires the engine briefly.</dd>
+				<dt>ROTATE:</dt>
+				<dd>rotates it 45° left.</dd>
+			</dl>
+			<p>Objective: maneuver ship around circular track as many times as possible without crashing into walls.</p>
+		</div>
+	</div>
+</section>
+
 <section id="about">
-	<p>Based on games designed by Barbara Y.White (<i>Cognition and Instruction 1(1):69-108, 1984</i>) and on the Dynatrack game developed by Andrea A. DiSessa (<i>Cognitive Science 6(1): 37-75, 1982</i>).</p>
+	<p>Based on games designed by Barbara Y. White (<i>Cognition and Instruction 1(1):69-108, 1984</i>) and on the Dynatrack game developed by Andrea A. DiSessa (<i>Cognitive Science 6(1): 37-75, 1982</i>).</p>
 	<p>Programmed in Pascal for the Apple II by Robert A. Morse, St. Albans School, Washington, DC 20016. Pascal version &copy; 1985.</p>
 	<p>Programmed in cT for Macintosh and MS-DOS by Richard E. Morse &amp; Robert A. Morse. cT version &copy; 1993.</p>
 	<p>Programmed in Java (JDK 1.1.8/Swing 1.1.1) by REMorse.  &copy; 2000.</p>
@@ -33,135 +184,12 @@
 	<p>Programmed in JavaScript/HTML5 by Ricky Morse (inertiagames@pukku.com). &copy; 2016.</p>
 </section>
 
-<section id="race">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>There is a spaceship initially at rest in outer space.</p>
-		<p>You control the ship's impulse engine with two buttons:</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 90° to left.</dd>
-		</dl>
-		<p>Object of game: cross finish line with fastest speed.</p>
-		<p>If you hit the walls, you crash.</p>
-	</div>
-</section>
-
-<section id="dock1">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is at rest relative to the circular target.</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 90° to left.</dd>
-		</dl>
-		<p>Object of game: stop ship inside target.</p>
-		<p>If you hit the walls, you crash.</p>
-	</div>
-</section>
-
-<section id="dock2">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is at rest relative to the circular target.</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 90° to left.</dd>
-		</dl>
-		<p>Object of game: stop ship inside target.</p>
-		<p>If you hit the walls, you crash.</p>
-	</div>
-</section>
-
-<section id="corner1">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is at rest in the region bounded by the walls.</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 90° to left.</dd>
-		</dl>
-		<p>Objective: maneuver ship around corner to the finish line.</p>
-		<p>If you hit the walls, you crash.</p>
-	</div>
-</section>
-
-<section id="corner2">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is already moving in the region bounded by the walls. (You will need to press the “Start” button to get the ship moving.)</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 90° to left.</dd>
-		</dl>
-		<p>Objective: maneuver ship around corner to the finish line.</p>
-		<p>If you hit the walls, you crash.</p>
-	</div>
-</section>
-
-<section id="corner3">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is at rest in the region bounded by the walls.</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 45° to left.</dd>
-		</dl>
-		<p>Objective: maneuver ship around corner to the finish line.</p>
-		<p>If you hit the walls, you crash.</p>
-	</div>
-</section>
-
-<section id="corner4">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is already moving in the region bounded by the walls. (You will need to press the “Start” button to get the ship moving.)</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires engine briefly kicking ship in direction it is heading.</dd>
-			<dt>ROTATE:</dt>
-			<dd>re-aims ship, rotating it 45° to left.</dd>
-		</dl>
-		<p>Rotate as often as you wish, but you have only <b>one</b> kick.<p>
-		<p>Objective: maneuver ship around corner to the finish line.</p>
-		<p>If you hit the walls, you crash.</p>
-		<p>The strength of the kick has been adjusted relative to the initial speed.</p>
-	</div>
-</section>
-
-<section id="dynatrack">
-	<div class="board">
-	</div>
-	<div class="instructions">
-		<p>The spaceship is at rest between the walls.</p>
-		<dl>
-			<dt>KICK:</dt>
-			<dd>fires the engine briefly.</dd>
-			<dt>ROTATE:</dt>
-			<dd>rotates it 45° left.</dd>
-		</dl>
-		<p>Objective: maneuver ship around circular track as many times as possible without crashing into walls.</p>
-	</div>
-</section>
+<script type="text/javascript">
+	var c = document.getElementById('canvas-rocket');
+	var ctx = c.getContext('2d');
+	ctx.drawImage(rockets[0], 50, 50);
+	ctx.drawImage(rockets[1], 100, 100);
+</script>
 
 </body>
 </html>
