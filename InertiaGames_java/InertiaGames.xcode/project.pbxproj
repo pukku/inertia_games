@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		00E6828EFEC88D1A11DB9C8B = {
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A,
+				130F8B81001BD9A911CA292A,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A,
+			);
+		};
+		00E6828FFEC88D1A11DB9C8B = {
+			children = (
+				E128971306F3514800865C52,
+				E1A5F96A06F348DF006E970F,
+				E128971106F3514800865C52,
+				E128971206F3514800865C52,
+				E128971406F3514900865C52,
+				E128971006F3514800865C52,
+				E128970F06F3514800865C52,
+				E12899C506F3893100865C52,
+				E128992A06F3836C00865C52,
+				E128992806F3836C00865C52,
+				E128992906F3836C00865C52,
+				E1CF50C306F3968900DECCAB,
+				E1CF50BF06F3968900DECCAB,
+				E1CF50C006F3968900DECCAB,
+				E1CF50C106F3968900DECCAB,
+				E1CF50C206F3968900DECCAB,
+				E1CF514E06F3A7A400DECCAB,
+				E1CF514D06F3A7A400DECCAB,
+				E1A4DA7906F335A60021C044,
+				00E68290FEC88D7311DB9C8B,
+				00E68291FEC88ED911DB9C8B,
+				E12897CC06F35E4000865C52,
+				E12896D306F34FD500865C52,
+				0120612AFEC8923411DB9C8B,
+			);
+			isa = PBXGroup;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		00E68290FEC88D7311DB9C8B = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = InertiaGames.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		00E68291FEC88ED911DB9C8B = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = InertiaGames.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//000
+//001
+//002
+//003
+//004
+//010
+//011
+//012
+//013
+//014
+		0120612AFEC8923411DB9C8B = {
+			children = (
+				329C72810360BFA200C91783,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//010
+//011
+//012
+//013
+//014
+//130
+//131
+//132
+//133
+//134
+		130F8B80001BD9A911CA292A = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		130F8B84001BDB6411CA292A = {
+			buildPhases = (
+				130F8B85001BDB6411CA292A,
+				130F8B87001BDB6411CA292A,
+				130F8B88001BDB6411CA292A,
+				130F8B89001BDB6411CA292A,
+			);
+			buildSettings = {
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_COMPILER_DEBUGGING_SYMBOLS = NO;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.1;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = InertiaGames;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			isa = PBXToolTarget;
+			name = InertiaGames;
+			productInstallPath = /usr/local/bin;
+			productName = JavaAWTApplet;
+			productReference = 329C72810360BFA200C91783;
+		};
+		130F8B85001BDB6411CA292A = {
+			buildActionMask = 2147483647;
+			files = (
+				130F8B86001BDB6411CA292A,
+				E1A4DA7A06F335A60021C044,
+				E1A5F96B06F348DF006E970F,
+				E128971506F3514900865C52,
+				E128971606F3514900865C52,
+				E128971706F3514900865C52,
+				E128971806F3514900865C52,
+				E128971906F3514900865C52,
+				E128971A06F3514900865C52,
+				E128992B06F3836C00865C52,
+				E128992C06F3836C00865C52,
+				E128992D06F3836C00865C52,
+				E12899C606F3893100865C52,
+				E1CF50C406F3968900DECCAB,
+				E1CF50C506F3968900DECCAB,
+				E1CF50C606F3968900DECCAB,
+				E1CF50C706F3968900DECCAB,
+				E1CF50C806F3968900DECCAB,
+				E1CF514F06F3A7A400DECCAB,
+				E1CF515006F3A7A400DECCAB,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		130F8B86001BDB6411CA292A = {
+			fileRef = 00E68290FEC88D7311DB9C8B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		130F8B87001BDB6411CA292A = {
+			buildActionMask = 2147483647;
+			files = (
+				E12896DD06F34FD500865C52,
+				E12896DE06F34FD500865C52,
+				E12896DF06F34FD500865C52,
+				E12896E006F34FD500865C52,
+				E12896E106F34FD500865C52,
+				E12896E206F34FD500865C52,
+				E12896E306F34FD500865C52,
+				E12896E406F34FD500865C52,
+				E12896E506F34FD500865C52,
+				E12897CE06F35E4000865C52,
+				E128984206F36CE700865C52,
+				E128984A06F36CF600865C52,
+				E128985206F36CFE00865C52,
+				E128985A06F36D0600865C52,
+				E128986206F36D0E00865C52,
+				E128986A06F36D1700865C52,
+				E128987206F36D2000865C52,
+				E128987A06F36D2800865C52,
+				E1CF527D06F4C4CC00DECCAB,
+			);
+			isa = PBXJavaArchiveBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		130F8B88001BDB6411CA292A = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		130F8B89001BDB6411CA292A = {
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A,
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		130F8B8A001BDB6411CA292A = {
+			fileRef = 00E68291FEC88ED911DB9C8B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//130
+//131
+//132
+//133
+//134
+//320
+//321
+//322
+//323
+//324
+		329C72810360BFA200C91783 = {
+			explicitFileType = "compiled.mach-o.executable";
+			fallbackIsa = PBXFileReference;
+			includeInIndex = 0;
+			isa = PBXZipArchiveReference;
+			path = InertiaGames.jar;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//320
+//321
+//322
+//323
+//324
+//E10
+//E11
+//E12
+//E13
+//E14
+		E12896D306F34FD500865C52 = {
+			children = (
+				E1CF527C06F4C4CC00DECCAB,
+				E12896D406F34FD500865C52,
+				E12896D506F34FD500865C52,
+				E12896D606F34FD500865C52,
+				E12896D706F34FD500865C52,
+				E12896D806F34FD500865C52,
+				E12896D906F34FD500865C52,
+				E12896DA06F34FD500865C52,
+				E12896DB06F34FD500865C52,
+				E12896DC06F34FD500865C52,
+			);
+			isa = PBXGroup;
+			path = images;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896D406F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading0.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896D506F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading1.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896D606F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading2.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896D706F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading3.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896D806F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading4.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896D906F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading5.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896DA06F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading6.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896DB06F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = heading7.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896DC06F34FD500865C52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = trackPic.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12896DD06F34FD500865C52 = {
+			fileRef = E12896D406F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896DE06F34FD500865C52 = {
+			fileRef = E12896D506F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896DF06F34FD500865C52 = {
+			fileRef = E12896D606F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896E006F34FD500865C52 = {
+			fileRef = E12896D706F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896E106F34FD500865C52 = {
+			fileRef = E12896D806F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896E206F34FD500865C52 = {
+			fileRef = E12896D906F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896E306F34FD500865C52 = {
+			fileRef = E12896DA06F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896E406F34FD500865C52 = {
+			fileRef = E12896DB06F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E12896E506F34FD500865C52 = {
+			fileRef = E12896DC06F34FD500865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+		E128970F06F3514800865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = RaceGameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128971006F3514800865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = RaceGamePanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128971106F3514800865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Rocket.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128971206F3514800865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = RocketPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128971306F3514800865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = RocketPanelCreator.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128971406F3514900865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SpeedometerPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128971506F3514900865C52 = {
+			fileRef = E128970F06F3514800865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128971606F3514900865C52 = {
+			fileRef = E128971006F3514800865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128971706F3514900865C52 = {
+			fileRef = E128971106F3514800865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128971806F3514900865C52 = {
+			fileRef = E128971206F3514800865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128971906F3514900865C52 = {
+			fileRef = E128971306F3514800865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128971A06F3514900865C52 = {
+			fileRef = E128971406F3514900865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E12897CC06F35E4000865C52 = {
+			children = (
+				E12897CD06F35E4000865C52,
+				E128984106F36CE700865C52,
+				E128984906F36CF600865C52,
+				E128985106F36CFE00865C52,
+				E128985906F36D0600865C52,
+				E128986106F36D0E00865C52,
+				E128986906F36D1700865C52,
+				E128987106F36D2000865C52,
+				E128987906F36D2800865C52,
+			);
+			isa = PBXGroup;
+			path = text;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12897CD06F35E4000865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = about.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12897CE06F35E4000865C52 = {
+			fileRef = E12897CD06F35E4000865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128984106F36CE700865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = race.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128984206F36CE700865C52 = {
+			fileRef = E128984106F36CE700865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128984906F36CF600865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = dock1.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128984A06F36CF600865C52 = {
+			fileRef = E128984906F36CF600865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128985106F36CFE00865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = dock2.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128985206F36CFE00865C52 = {
+			fileRef = E128985106F36CFE00865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128985906F36D0600865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = corner1.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128985A06F36D0600865C52 = {
+			fileRef = E128985906F36D0600865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128986106F36D0E00865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = corner2.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128986206F36D0E00865C52 = {
+			fileRef = E128986106F36D0E00865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128986906F36D1700865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = corner3.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128986A06F36D1700865C52 = {
+			fileRef = E128986906F36D1700865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128987106F36D2000865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = corner4.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128987206F36D2000865C52 = {
+			fileRef = E128987106F36D2000865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128987906F36D2800865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = dynatrack.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128987A06F36D2800865C52 = {
+			fileRef = E128987906F36D2800865C52;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = text;
+			};
+		};
+		E128992806F3836C00865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Dock1GameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128992906F3836C00865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Dock2GameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128992A06F3836C00865C52 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = DockPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E128992B06F3836C00865C52 = {
+			fileRef = E128992806F3836C00865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128992C06F3836C00865C52 = {
+			fileRef = E128992906F3836C00865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E128992D06F3836C00865C52 = {
+			fileRef = E128992A06F3836C00865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E12899C506F3893100865C52 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SquareGameBoard.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E12899C606F3893100865C52 = {
+			fileRef = E12899C506F3893100865C52;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1A4DA7906F335A60021C044 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = AboutCard.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1A4DA7A06F335A60021C044 = {
+			fileRef = E1A4DA7906F335A60021C044;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1A5F96A06F348DF006E970F = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = GameDisplayCard.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1A5F96B06F348DF006E970F = {
+			fileRef = E1A5F96A06F348DF006E970F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF50BF06F3968900DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Corner1GameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF50C006F3968900DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Corner2GameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF50C106F3968900DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Corner3GameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF50C206F3968900DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Corner4GameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF50C306F3968900DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = CornerPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF50C406F3968900DECCAB = {
+			fileRef = E1CF50BF06F3968900DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF50C506F3968900DECCAB = {
+			fileRef = E1CF50C006F3968900DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF50C606F3968900DECCAB = {
+			fileRef = E1CF50C106F3968900DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF50C706F3968900DECCAB = {
+			fileRef = E1CF50C206F3968900DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF50C806F3968900DECCAB = {
+			fileRef = E1CF50C306F3968900DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF514D06F3A7A400DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = DynatrackGameEmbed.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF514E06F3A7A400DECCAB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = DynatrackPanel.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF514F06F3A7A400DECCAB = {
+			fileRef = E1CF514D06F3A7A400DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF515006F3A7A400DECCAB = {
+			fileRef = E1CF514E06F3A7A400DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1CF527C06F4C4CC00DECCAB = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = title.gif;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1CF527D06F4C4CC00DECCAB = {
+			fileRef = E1CF527C06F4C4CC00DECCAB;
+			isa = PBXBuildFile;
+			settings = {
+				JAVA_ARCHIVE_SUBDIR = images;
+			};
+		};
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B;
+}

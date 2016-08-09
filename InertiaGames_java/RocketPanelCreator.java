@@ -1,0 +1,1 @@
+package stalbans.inertiagames;public interface RocketPanelCreator {	public void gameCompleted() ;}
